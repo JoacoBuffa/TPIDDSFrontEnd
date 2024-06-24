@@ -62,6 +62,11 @@ function Menu() {
                 Articulos JWT
               </NavLink>
             </li>
+            <li>
+              <NavLink className="nav-link" title="exclusivo para administradores" to="/empleado">
+              Empleado
+              </NavLink>
+            </li>
 
 
             <li className="nav-item dropdown bg-dark">
