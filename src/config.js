@@ -10,8 +10,17 @@ const urlResourceArticulos = urlServidor + "/api/articulos";
 const urlResourceArticulosFamilias = urlServidor + "/api/articulosfamilias";
 const urlResourceArticulosJWT = urlServidor + "/api/articulosjwt";
 
+
+const urlResourceClubes = urlServidor + "/api/clubes";
+const urlResourceCiudades = urlServidor + "/api/ciudades";
+
+
 export const config = {
     urlServidor,
+
+    urlResourceClubes,
+    urlResourceCiudades,
+
     urlResourceArticulos,
     urlResourceArticulosFamilias,
     urlResourceArticulosJWT,

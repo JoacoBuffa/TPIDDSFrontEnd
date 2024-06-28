@@ -48,6 +48,16 @@ function Menu() {
               </NavLink>
             </li>
             <li className="nav-item">
+              <NavLink className="nav-link" to="/clubes">
+                Clubes
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/ciudades">
+                Ciudades
+              </NavLink>
+            </li>
+            <li className="nav-item">
               <NavLink className="nav-link" to="/articulosfamilias">
                 Articulos Familias
               </NavLink>

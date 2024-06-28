@@ -16,6 +16,13 @@ function Inicio() {
       <Link to="/articulosfamilias" className="btn btn-lg btn-primary">
           <i className="fa fa-search"> </i>  Ver Articulos Familias
     </Link>
+    <h1> ------------------------------</h1>
+    <Link to="/clubes" className="btn btn-lg btn-danger">
+          <i className="fa fa-search"> </i> VER CLUBES
+    </Link>
+    <Link to="/ciudades" className="btn btn-lg btn-danger">
+          <i className="fa fa-search"> </i> VER CIUDADES
+    </Link>
 
     </div>
   );
