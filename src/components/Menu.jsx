@@ -1,17 +1,12 @@
 import React, { useEffect, useState } from "react";
-import { NavLink} from "react-router-dom";
-
-
+import { NavLink } from "react-router-dom";
 
 function Menu() {
-  
-
-
   return (
     <nav className="navbar navbar-dark bg-dark navbar-expand-md">
       <div className="container-fluid">
         <a className="navbar-brand" href="#!">
-        <i class="fa fa-soccer-ball"></i>
+          <i class="fa fa-soccer-ball"></i>
           &nbsp;<i>FULBO</i>
         </a>
         <button
@@ -52,16 +47,31 @@ function Menu() {
                 Temporadas
               </NavLink>
             </li>
-          
-
-        
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/entrenadores">
+                Entrenadores
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/tiposEntrenadores">
+                Tipos Entrenadores
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/jugadores">
+                Jugadores
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/posiciones">
+                Posiciones
+              </NavLink>
+            </li>
           </ul>
-
         </div>
       </div>
     </nav>
   );
 }
 
-
-export {Menu};
+export { Menu };

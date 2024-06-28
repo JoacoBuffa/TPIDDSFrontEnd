@@ -1,10 +1,8 @@
 //const urlServidor = "http://localhost:3000"
 //const urlServidor = ""  // vacio para cuando se despliega el frontend, en el mismo servidor que el backend
-const urlServidor = "http://localhost:4000"
+const urlServidor = "http://localhost:4000";
 //const urlServidor = "https://webapi.pymes.net.ar"
 //const urlServidor = "https://labsys.frc.utn.edu.ar/dds-express"
-
-
 
 const urlResourceClubes = urlServidor + "/api/clubes";
 const urlResourceCiudades = urlServidor + "/api/ciudades";
@@ -15,16 +13,21 @@ const urlResourceTemporadas = urlServidor + "/api/temporadas";
 const urlResourceJugadores = urlServidor + "/api/jugadores";
 const urlResourcePosiciones = urlServidor + "/api/posiciones";
 
+const urlResourceEntrenadores = urlServidor + "/api/entrenadores";
+const urlResourceTiposEntrenadores = urlServidor + "/api/tipoEntrenador";
 
 export const config = {
-    urlServidor,
+  urlServidor,
 
-    urlResourceClubes,
-    urlResourceCiudades,
+  urlResourceClubes,
+  urlResourceCiudades,
 
-    urlResourceTorneos,
-    urlResourceTemporadas,
+  urlResourceTorneos,
+  urlResourceTemporadas,
 
-    urlResourcePosiciones,
-    urlResourceJugadores,
-}
+  urlResourcePosiciones,
+  urlResourceJugadores,
+
+  urlResourceEntrenadores,
+  urlResourceTiposEntrenadores,
+};
