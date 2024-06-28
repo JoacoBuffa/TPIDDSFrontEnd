@@ -12,6 +12,10 @@ const urlResourceCiudades = urlServidor + "/api/ciudades";
 const urlResourceTorneos = urlServidor + "/api/torneos";
 const urlResourceTemporadas = urlServidor + "/api/temporadas";
 
+const urlResourceJugadores = urlServidor + "/api/jugadores";
+const urlResourcePosiciones = urlServidor + "/api/posiciones";
+
+
 export const config = {
     urlServidor,
 
@@ -20,4 +24,7 @@ export const config = {
 
     urlResourceTorneos,
     urlResourceTemporadas,
+
+    urlResourcePosiciones,
+    urlResourceJugadores,
 }

@@ -30,7 +30,8 @@ function App() {
             <Route path="/ciudades" element={<Ciudades />} />
             <Route path="/temporadas" element={<Temporadas />} />
             <Route path="/torneos" element={<Torneos />} />
-
+            <Route path="/jugadores" element={<Jugadores />} />
+            <Route path="/posiciones" element={<Posiciones />} />
             
             <Route path="*" element={<Navigate to="/inicio" replace />} />
           </Routes>
