@@ -42,6 +42,16 @@ function Menu() {
                 Ciudades
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/torneos">
+                Torneos
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/temporadas">
+                Temporadas
+              </NavLink>
+            </li>
           
 
         

@@ -9,6 +9,8 @@ const urlServidor = "http://localhost:4000"
 const urlResourceClubes = urlServidor + "/api/clubes";
 const urlResourceCiudades = urlServidor + "/api/ciudades";
 
+const urlResourceTorneos = urlServidor + "/api/torneos";
+const urlResourceTemporadas = urlServidor + "/api/temporadas";
 
 export const config = {
     urlServidor,
@@ -16,4 +18,6 @@ export const config = {
     urlResourceClubes,
     urlResourceCiudades,
 
+    urlResourceTorneos,
+    urlResourceTemporadas,
 }

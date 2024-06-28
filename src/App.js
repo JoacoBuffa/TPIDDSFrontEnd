@@ -7,6 +7,8 @@ import { Menu } from "./components/Menu";
 import { Footer } from "./components/Footer";
 import { ModalDialog } from "./components/ModalDialog";
 
+import { Torneos} from "./components/torneos/Torneos";
+import { Temporadas } from "./components/Temporadas";
 
 import { Clubes } from "./components/clubes/Clubes";
 import { Ciudades } from "./components/clubes/Ciudades";
@@ -26,6 +28,8 @@ function App() {
 
             <Route path="/clubes" element={<Clubes />} />
             <Route path="/ciudades" element={<Ciudades />} />
+            <Route path="/temporadas" element={<Temporadas />} />
+            <Route path="/torneos" element={<Torneos />} />
 
             
             <Route path="*" element={<Navigate to="/inicio" replace />} />

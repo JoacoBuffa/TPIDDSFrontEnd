@@ -20,6 +20,12 @@ function Inicio() {
       <Link to="/ciudades" className="btn btn-lg btn-danger shadow-lg">
             <i className="fa fa-search"> </i> VER CIUDADES
       </Link>
+      <Link to="/torneos" className="btn btn-lg btn-danger shadow-lg">
+            <i className="fa fa-search"> </i> VER TORNEOS
+      </Link>
+      <Link to="/temporadas" className="btn btn-lg btn-danger shadow-lg">
+            <i className="fa fa-search"> </i> VER TEMPORADAS
+      </Link>
       <h1> -----------------------</h1>
       
 
