@@ -3,21 +3,16 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { Inicio } from "./components/Inicio";
-import { ArticulosFamilias } from "./components/ArticulosFamilias";
 import { Menu } from "./components/Menu";
 import { Footer } from "./components/Footer";
-import { Articulos } from "./components/articulos/Articulos";
 import { ModalDialog } from "./components/ModalDialog";
-import { ArticulosJWT } from "./components/articulosJWT/ArticulosJWT";
-import { RequireAuth } from "./components/RequiereAuth";
-import { Login } from "./components/login/Login";
 
 
 import { Clubes } from "./components/clubes/Clubes";
 import { Ciudades } from "./components/clubes/Ciudades";
 
 
-import Empleado from "./components/empleados/Empleado"; // Asegúrate de que esta ruta sea correcta
+
 
 function App() {
   return (
@@ -28,22 +23,11 @@ function App() {
         <div className="divBody">
           <Routes>
             <Route path="/inicio" element={<Inicio />} />
-            
+
             <Route path="/clubes" element={<Clubes />} />
             <Route path="/ciudades" element={<Ciudades />} />
 
-            <Route path="/articulosfamilias" element={<ArticulosFamilias />} />
-            <Route path="/articulos" element={<Articulos />} />
-            <Route path="/empleado" element={<Empleado />} />
-            <Route
-              path="/articulosjwt"
-              element={
-                <RequireAuth>
-                  <ArticulosJWT />
-                </RequireAuth>
-              }
-            />
-            <Route path="/login/:componentFrom" element={<Login />} />
+            
             <Route path="*" element={<Navigate to="/inicio" replace />} />
           </Routes>
         </div>
