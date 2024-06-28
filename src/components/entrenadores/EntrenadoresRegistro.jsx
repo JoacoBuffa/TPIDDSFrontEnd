@@ -226,7 +226,7 @@ export default function EntrenadoresRegistro({
                 className={
                   "form-control" + (errors?.Activo ? " is-invalid" : "")
                 }
-                disabled
+                enabled
               >
                 <option value={null}></option>
                 <option value={false}>NO</option>

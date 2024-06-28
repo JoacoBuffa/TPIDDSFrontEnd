@@ -37,16 +37,8 @@ function Menu() {
                 Ciudades
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/torneos">
-                Torneos
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/temporadas">
-                Temporadas
-              </NavLink>
-            </li>
+            
+            
             <li className="nav-item">
               <NavLink className="nav-link" to="/entrenadores">
                 Entrenadores
@@ -65,6 +57,16 @@ function Menu() {
             <li className="nav-item">
               <NavLink className="nav-link" to="/posiciones">
                 Posiciones
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/torneos">
+                Torneos
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink className="nav-link" to="/temporadas">
+                Temporadas
               </NavLink>
             </li>
           </ul>

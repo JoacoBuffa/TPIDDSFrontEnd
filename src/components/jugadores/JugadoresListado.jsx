@@ -7,6 +7,7 @@ export default function JugadoresListado({
   Modificar,
   ActivarDesactivar,
   Pagina,
+  Eliminar,
   RegistrosTotal,
   Posiciones,
   Paginas,
@@ -72,6 +73,13 @@ export default function JugadoresListado({
                     <i
                       className={"fa fa-" + (Item.Activo ? "times" : "check")}
                     ></i>
+                  </button>
+                  <button
+                    className="btn btn-sm btn-outline-danger"
+                    title="Eliminar"
+                    onClick={() => Eliminar(Item)}
+                  >
+                    <i className="fa fa-trash"></i>
                   </button>
                 </td>
               </tr>

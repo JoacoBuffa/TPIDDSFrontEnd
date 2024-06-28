@@ -24,25 +24,25 @@ export default function TorneosRegistro({
 
         <fieldset disabled={AccionABMC === "C"}>
 
-          {/* campo nombre de torneo */}
+          {/* campo nombre */}
           <div className="row">
             <div className="col-sm-4 col-md-3 offset-md-1">
               <label className="col-form-label" htmlFor="Nombre_torneo">
-                Nombre<span className="text-danger">*</span>:
+                Nombre torneo<span className="text-danger">*</span>:
               </label>
             </div>
             <div className="col-sm-8 col-md-6">
               <input
                 type="text"
                 {...register("Nombre_torneo", {
-                  required: { value: true, message: "Nombre es requerido" },
+                  required: { value: true, message: "Nombre_torneo es requerido" },
                   minLength: {
                     value: 4,
-                    message: "Nombre debe tener al menos 4 caracteres",
+                    message: "Nombre_torneo debe tener al menos 4 caracteres",
                   },
                   maxLength: {
                     value: 55,
-                    message: "Nombre debe tener como máximo 55 caracteres",
+                    message: "Nombre_torneo debe tener como máximo 55 caracteres",
                   },
                 })}
                 autoFocus
@@ -58,65 +58,48 @@ export default function TorneosRegistro({
             </div>
           </div>
 
-          {/* campo fechaDeFinal */}
+          {/* campo Dni */}
           <div className="row">
             <div className="col-sm-4 col-md-3 offset-md-1">
               <label className="col-form-label" htmlFor="fechaDeFinal">
-                Fecha Final<span className="text-danger">*</span>:
+                Fecha Final:
               </label>
             </div>
             <div className="col-sm-8 col-md-6">
               <input
                 type="date"
                 {...register("fechaDeFinal", {
-                  required: { value: true, message: "Fecha de final es requerido" }
+                  required: { value: true, message: "fechaDeFinal es requerido" },
                 })}
-                className={
-                  "form-control " + (errors?.fechaDeFinal ? "is-invalid" : "")
-                }
+                className={"form-control " + (errors?.fechaDeFinal ? "is-invalid" : "")}
               />
-              <div className="invalid-feedback">
-                {errors?.fechaDeFinal?.message}
-              </div>
+              {errors?.fechaDeFinal && touchedFields.fechaDeFinal && (
+                <div className="invalid-feedback">{errors?.fechaDeFinal?.message}</div>
+              )}
             </div>
           </div>
-          
 
-
-          {/* campo PromedioGoles */}
+          {/* campo FechaNacimiento */}
           <div className="row">
             <div className="col-sm-4 col-md-3 offset-md-1">
               <label className="col-form-label" htmlFor="PromedioGoles">
-                Promedio de goles<span className="text-danger">*</span>:
+                PromedioGoles
               </label>
             </div>
             <div className="col-sm-8 col-md-6">
               <input
-                type="number" step=".01"
-                {...register("PromedioGoles", {
-                  required: { value: true, message: "Promedio de goles es requerido" },
-                  min: {
-                    value: 0.01,
-                    message: "Promedio de goles debe ser mayor a 0",
-                  },
-                  max: {
-                    value: 99999.99,
-                    message: "Promedio de goles debe ser menor o igual a 99999.99",
-                  },
-                })}
+                type="number"
+                {...register("PromedioGoles")}
                 className={
                   "form-control " + (errors?.PromedioGoles ? "is-invalid" : "")
                 }
               />
-              <div className="invalid-feedback">{errors?.PromedioGoles?.message}</div>
             </div>
           </div>
-
-          {/* campo Finalizado */}
           <div className="row">
             <div className="col-sm-4 col-md-3 offset-md-1">
               <label className="col-form-label" htmlFor="Finalizado">
-                Finalizado<span className="text-danger">*</span>:
+              Finalizado<span className="text-danger">*</span>:
               </label>
             </div>
             <div className="col-sm-8 col-md-6">
@@ -128,7 +111,7 @@ export default function TorneosRegistro({
                 className={
                   "form-control" + (errors?.Finalizado ? " is-invalid" : "")
                 }
-                disabled
+                enabled
               >
                 <option value={null}></option>
                 <option value={false}>NO</option>
@@ -137,6 +120,39 @@ export default function TorneosRegistro({
               <div className="invalid-feedback">{errors?.Finalizado?.message}</div>
             </div>
           </div>
+
+          {/* campo IdPosicion */}
+          <div className="row">
+            <div className="col-sm-4 col-md-3 offset-md-1">
+              <label className="col-form-label" htmlFor="Id_Temporada">
+                Temporada <span className="text-danger">*</span>:
+              </label>
+            </div>
+            <div className="col-sm-8 col-md-6">
+              <select
+                {...register("Id_Temporada", {
+                  required: { value: true, message: "Temporada es requerido" },
+                })}
+                className={
+                  "form-control " + (errors?.Id_Temporada ? "is-invalid" : "")
+                }
+              >
+                <option value="" key={1}></option>
+                {Temporadas?.map((x) => (
+                  <option value={x.Id_Temporada} key={x.Id_Temporada}>
+                    {x.Año}
+                  </option>
+                ))}
+              </select>
+              <div className="invalid-feedback">
+                {errors?.Id_Temporada?.message}
+              </div>
+            </div>
+          </div>
+
+
+          {/* campo Activo */}
+          
 
         </fieldset>
 

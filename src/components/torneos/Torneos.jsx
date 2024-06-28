@@ -92,11 +92,7 @@ function Torneos() {
     BuscarPorId(item, "C"); // paso la accionABMC pq es asincrono la busqueda y luego de ejecutarse quiero cambiar el estado accionABMC
   }
   function Modificar(item) {
-    if (!item.Activo) {
-      //alert("No puede modificarse un registro Inactivo.");
-      modalDialogService.Alert("No puede modificarse un registro Inactivo.");
-      return;
-    }
+    
     BuscarPorId(item, "M"); // paso la accionABMC pq es asincrono la busqueda y luego de ejecutarse quiero cambiar el estado accionABMC
   }
 
@@ -174,8 +170,6 @@ function Torneos() {
         <TorneosBuscar
           Nombre_torneo={Nombre_torneo}
           setNombre_torneo={setNombre_torneo}
-          Finalizado={Finalizado}
-          setFinalizado={setFinalizado}
           Buscar={Buscar}
           Agregar={Agregar}
         />

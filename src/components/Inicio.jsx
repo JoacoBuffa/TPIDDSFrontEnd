@@ -35,6 +35,9 @@ function Inicio() {
       <Link to="/entrenadores" className="btn btn-lg btn-danger shadow-lg">
         <i className="fa fa-search"> </i> VER ENTRENADORES
       </Link>
+      <Link to="/jugadores" className="btn btn-lg btn-danger shadow-lg">
+        <i className="fa fa-search"> </i> VER JUGADORES
+      </Link>
 
       <h1> -----------------------</h1>
     </div>

@@ -71,7 +71,7 @@ export default function EntrenadoresListado({
                     >
                       <i className="fa fa-pencil"></i>
                     </button>
-                    <button
+                    {/* <button
                       className={
                         "btn btn-sm " +
                         (Item.Activo
@@ -84,7 +84,7 @@ export default function EntrenadoresListado({
                       <i
                         className={"fa fa-" + (Item.Activo ? "times" : "check")}
                       ></i>
-                    </button>
+                    </button> */}
                     <button
                       className="btn btn-sm btn-outline-danger"
                       title="Eliminar"

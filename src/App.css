@@ -17,6 +17,9 @@ footer {
   font-size: 1.5rem;
 }
 
+.btn-danger {
+  margin: 10px; /* Añade espacio entre los botones */
+}
 .tituloPagina {
   font-size: 1.75rem;
   font-weight: 500;

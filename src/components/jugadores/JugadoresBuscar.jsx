@@ -4,7 +4,7 @@ export default function JugadoresBuscar ({NombreApellido, setNombreApellido, Act
     return (
     <form>
       <div className="container-fluid">
-        <div className="row">
+        <div className="row justify-content-center ">
           <div className="col-sm-4 col-md-2">
             <label className="col-form-label">Nombre y Apellido:</label>
           </div>
@@ -18,20 +18,7 @@ export default function JugadoresBuscar ({NombreApellido, setNombreApellido, Act
               autoFocus
             />
           </div>
-          <div className="col-sm-4 col-md-2">
-            <label className="col-form-label">Activo:</label>
-          </div>
-          <div className="col-sm-8 col-md-4">
-            <select
-              className="form-control"
-              onChange={(e) => setActivo(e.target.value)}
-              value={Activo}
-            >
-              <option value={""}></option>
-              <option value={false}>NO</option>
-              <option value={true}>SI</option>
-            </select>
-          </div>
+         
         </div>
   
         <hr />

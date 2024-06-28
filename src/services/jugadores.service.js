@@ -1,11 +1,9 @@
-
 import httpService from "./http.service";
 //const urlResource = "https://labsys.frc.utn.edu.ar/dds-express/api/articulos";
 
 // mas adelante podemos usar un archivo de configuracion para el urlResource
- import {config} from "../config";
- const urlResource = config.urlResourceJugadores;
-
+import { config } from "../config";
+const urlResource = config.urlResourceJugadores;
 
 async function Buscar(NombreApellido, Activo, Pagina) {
   const resp = await httpService.get(urlResource, {
@@ -14,17 +12,16 @@ async function Buscar(NombreApellido, Activo, Pagina) {
   return resp.data;
 }
 
-
 async function BuscarPorId(item) {
   const resp = await httpService.get(urlResource + "/" + item.IdJugador);
   return resp.data;
 }
 
-
 async function ActivarDesactivar(item) {
-  await httpService.delete(urlResource + "/" + item.IdJugador);
+  await httpService.put(urlResource + "/suspender/" + item.IdJugador, {
+    activo: !item.activo,
+  });
 }
-
 
 async function Grabar(item) {
   if (item.IdJugador === 0) {
@@ -34,7 +31,14 @@ async function Grabar(item) {
   }
 }
 
+async function Eliminar(item) {
+  await httpService.delete(urlResource + "/" + item.IdJugador);
+}
 
 export const jugadoresService = {
-  Buscar,BuscarPorId,ActivarDesactivar,Grabar
+  Buscar,
+  BuscarPorId,
+  ActivarDesactivar,
+  Grabar,
+  Eliminar,
 };

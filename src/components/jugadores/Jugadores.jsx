@@ -115,6 +115,18 @@ function Jugadores() {
   function Imprimir() {
     modalDialogService.Alert("En desarrollo...");
   }
+  async function Eliminar(item) {
+    modalDialogService.Confirm(
+      "Esta seguro que quiere eliminar el registro?",
+      undefined,
+      undefined,
+      undefined,
+      async () => {
+        await jugadoresService.Eliminar(item);
+        await Buscar();
+      }
+    );  
+  }
 
   async function ActivarDesactivar(item) {
     modalDialogService.Confirm(
@@ -173,8 +185,6 @@ function Jugadores() {
         <JugadoresBuscar
           NombreApellido={NombreApellido}
           setNombreApellido={setNombreApellido}
-          Activo={Activo}
-          setActivo={setActivo}
           Buscar={Buscar}
           Agregar={Agregar}
         />
@@ -187,6 +197,7 @@ function Jugadores() {
             Items,
             Consultar,
             Modificar,
+            Eliminar,
             ActivarDesactivar,
             Imprimir,
             Pagina,
