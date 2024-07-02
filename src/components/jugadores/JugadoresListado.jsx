@@ -18,13 +18,13 @@ export default function JugadoresListado({
       <table className="table table-hover table-sm table-bordered table-striped">
         <thead>
           <tr>
-            <th className="text-center">Nombre y Apellido</th>
-            <th className="text-center">Fecha de Nacimiento</th>
-            <th className="text-center">Activo</th>
-            <th className="text-center">Altura</th>
-            <th className="text-center">Peso</th>
-            <th className="text-center">Posicion</th>
-            <th className="text-center text-nowrap">Acciones</th>
+            <th className="text-white text-center bg-dark">Nombre y Apellido</th>
+            <th className="text-white text-center bg-dark">Fecha de Nacimiento</th>
+            <th className="text-white text-center bg-dark">Activo</th>
+            <th className="text-white text-center bg-dark">Altura</th>
+            <th className="text-white text-center bg-dark">Peso</th>
+            <th className="text-white text-center bg-dark">Posicion</th>
+            <th className="text-white text-center bg-dark">Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -60,20 +60,7 @@ export default function JugadoresListado({
                   >
                     <i className="fa fa-pencil"></i>
                   </button>
-                  <button
-                    className={
-                      "btn btn-sm " +
-                      (Item.Activo
-                        ? "btn-outline-danger"
-                        : "btn-outline-success")
-                    }
-                    title={Item.Activo ? "Desactivar" : "Activar"}
-                    onClick={() => ActivarDesactivar(Item)}
-                  >
-                    <i
-                      className={"fa fa-" + (Item.Activo ? "times" : "check")}
-                    ></i>
-                  </button>
+                 
                   <button
                     className="btn btn-sm btn-outline-danger"
                     title="Eliminar"

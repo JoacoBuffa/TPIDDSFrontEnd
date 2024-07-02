@@ -14,14 +14,14 @@ function Temporadas() {
   };
   return (
     <div>
-      <div className="tituloPagina">{tituloPagina}</div>
+      <div className="text-center text-white display-6 fw-bold shadow-lg p-3 mb-3 bg-dark rounded">{tituloPagina}</div>
       <table className="table table-bordered table-striped">
         <thead>
           <tr>
-            <th style={{ width: "25%" }}>Id_Temporada</th>
-            <th style={{ width: "25%" }}>Año</th>
-            <th style={{ width: "25%" }}>FechaDesde</th>
-            <th style={{ width: "25%" }}>FechaHasta</th>
+            <th style={{ width: "25%" }} className="text-white text-center bg-dark">Id_Temporada</th>
+            <th style={{ width: "25%" }} className="text-white text-center bg-dark">Año</th>
+            <th style={{ width: "25%" }} className="text-white text-center bg-dark">FechaDesde</th>
+            <th style={{ width: "25%" }} className="text-white text-center bg-dark">FechaHasta</th>
           </tr>
         </thead>
         <tbody>

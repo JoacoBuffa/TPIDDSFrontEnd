@@ -14,12 +14,12 @@ function Posiciones() {
   };
   return (
     <div>
-      <div className="tituloPagina">{tituloPagina}</div>
+      <div className="text-center text-white display-6 fw-bold shadow-lg p-3 mb-3 bg-dark rounded">{tituloPagina}</div>
       <table className="table table-bordered table-striped">
         <thead>
           <tr>
-            <th style={{ width: "40%" }}>IdPosicion</th>
-            <th style={{ width: "60%" }}>Nombre</th>
+            <th style={{ width: "40%" }} className="text-white text-center bg-dark">IdPosicion</th>
+            <th style={{ width: "60%" }} className="text-white text-center bg-dark">Nombre</th>
           </tr>
         </thead>
         <tbody>

@@ -18,12 +18,12 @@ export default function TorneosListado({
       <table className="table table-hover table-sm table-bordered table-striped">
         <thead>
           <tr>
-            <th className="text-center">Nombre</th>
-            <th className="text-center">Fecha de final</th>
-            <th className="text-center">Promedio de goles</th>
-            <th className="text-center">Finalizado</th>
-            <th className="text-center">Temporada</th>
-            <th className="text-center text-nowrap">Acciones</th>
+            <th className="text-white text-center bg-dark">Nombre</th>
+            <th className="text-white text-center bg-dark">Fecha de final</th>
+            <th className="text-white text-center bg-dark">Promedio de goles</th>
+            <th className="text-white text-center bg-dark">Finalizado</th>
+            <th className="text-white text-center bg-dark">Temporada</th>
+            <th className="text-white text-center bg-dark">Acciones</th>
           </tr>
         </thead>
         <tbody>

@@ -187,7 +187,7 @@ function Entrenadores() {
 
   return (
     <div>
-      <div className="tituloPagina">
+      <div className="text-center text-white display-6 fw-bold shadow-lg p-3 mb-3 bg-dark rounded">
         Entrenadores <small>{TituloAccionABMC[AccionABMC]}</small>
       </div>
 
